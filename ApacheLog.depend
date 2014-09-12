@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1410512991 source:/home/student/Desktop/ApacheLog/main.cpp
+	"AllHeaders.h"
+
+1410506069 /home/student/Desktop/ApacheLog/AllHeaders.h
+	<iostream>
+	<cstdlib>
+	<vector>
+	<cstring>
+	<string>
+	<fstream>
+	<ctime>
+	<map>
+	"DateTime.h"
+	"LogRow.h"
+	"funkcje.h"
+
+1410442797 /home/student/Desktop/ApacheLog/DateTime.h
+	"AllHeaders.h"
+
+1410510649 /home/student/Desktop/ApacheLog/LogRow.h
+	"AllHeaders.h"
+
+1410442527 source:/home/student/Desktop/ApacheLog/DateTime.cpp
+	"AllHeaders.h"
+
+1410507591 source:/home/student/Desktop/ApacheLog/LogRow.cpp
+	"AllHeaders.h"
+
+1410513487 source:/home/student/Desktop/ApacheLog/funkcje.cpp
+	"AllHeaders.h"
+
+1410513455 /home/student/Desktop/ApacheLog/funkcje.h
+	"AllHeaders.h"
+
