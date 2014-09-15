@@ -1,48 +1,27 @@
 #include "AllHeaders.h"
 
 using namespace std;
-/*
-string wczytajDane()
+int ileLogow; //zmienna zliczajaca ile jest linii logow zczytanych z pliku
+
+vector<string> wczytajDane()
 
 {
+    vector<string>linieLogow;
     string linia;
-    ifstream Logs;                  //otwieranie pliku do odczytu
+    ifstream Logs;
+                     //otwieranie pliku do odczytu
     Logs.open("Logs.txt");
     while(Logs.peek() !=EOF)        //dopoki nie napotkamy konca pliku
     {
         getline(Logs, linia);
-        cout << linia << endl;
+        //cout << linia << endl;
+        linieLogow.push_back(linia);
+        ileLogow++;
 
     }
-    return linia;
+    return linieLogow;
 }
-*/
-void stworzLogi(string log)
-{
 
-
-}
-/*
-vector<string> dzielNaLogi(string log)
-{
-    vector<string> wektor;
-    uint a =0;
-    uint b = 0;
-    for(;;)
-    {
-        b = log.find ('\n', a);
-        if(b==string::npos)
-        {
-            wektor.push_back(log.substr(a));
-            return wektor;
-        }
-
-        wektor.push_back(log.substr(a, b-a));
-        a = b+1;
-    }
-    return wektor;
-}
-*/
 
 string znajdzBajty(string log)
 {
@@ -72,6 +51,25 @@ int wyciagnijBajty(string log)
     return bajtNaInt(znajdzBajty(log));
 }
 
+string znajdzPrzegladarke(string log)
+{
+    string brow("");
+    int mo=0, ch =0, op =0, ie=0 ;
+
+    mo = log.find("Mozilla", 0);
+    ch = log.find("Chrome", 0);
+    op = log.find("Opera", 0);
+    ie = log.find("Internet Explorer", 0);
+
+  //  cout <<"mo= " <<  mo << "\tch= " << ch <<"\top= " << op << "\tie = "<< ie<< endl;
+
+    if( mo >= 1) { return brow = "Mozilla";}
+    else if(ch >= 1 ) { return brow= "Chrome";}
+    else if( op >= 1) {return brow= "Opera";}
+    else if( ie >= 1) { return brow= "IE";}
+    else return brow = "Other";
+}
+
 vector<string> wytnijIP(string log)
 {
     vector<string> ip;
@@ -99,7 +97,7 @@ vector<string> wytnijIP(string log)
     return ip;
 }
 
-vector<int> stworzInt(vector<string> stringip)
+vector<int> stworzInt(vector<string> stringip) //zmienia stringi ip na inty)
 {
     vector<int> ip;
     for(string::size_type i =0; i<stringip.size(); i++)
@@ -109,9 +107,12 @@ vector<int> stworzInt(vector<string> stringip)
     return ip;
 }
 
-vector<int> stworzIP(string log)
+uint32_t stworzIP(string log)
 {
-    return stworzInt(wytnijIP(log));
+    vector<int> tmp = stworzInt(wytnijIP(log));
+    uint32_t ip = 0;
+    for(int i =0; i<4; i++) ip += tmp.at(i);
+    return ip;
 }
 
 

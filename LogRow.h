@@ -3,7 +3,7 @@
 
 using namespace std;
 
-enum browser {None, Mozilla, Chrome, Opera, InternetExplorer, Other};
+//enum browser {None, Mozilla, Chrome, Opera, InternetExplorer, Other};
 
 union AdresIP
 {
@@ -16,16 +16,14 @@ class LogRow
 private:
     AdresIP IP;
     DateTime czas;
-    browser przegladarka;
+    string przegladarka;
     int32_t iloscDanych;
 
 public:
     ///KONSTRUKCJA/DEKONSTRUKCJA
     LogRow();
-    LogRow( string dit,                     ///skladowe daty
-            vector<int> ip,                 ///skladowe IP
-            browser p, int32_t id   );      ///przegladarka i ilosc danych
-
+    //LogRow(string log);
+    LogRow (string dit, vector <int> ip, string p, int32_t id);
     ~LogRow();
 
     ///METODY

@@ -2,10 +2,11 @@
 #include "AllHeaders.h"
 
 using namespace std;
+
 ///TWORZENIE LOGOW - sprawdzic i poprawic
-//string wczytajDane();
-void stworzLogi();
-//vector <string> dzielNaLogi(string log);            ///dzieli na poszczegolne logi
+vector<string> wczytajDane();
+
+
 
 ///WYCIAGANIE LICZBY BAJTOW I PRZEGLADARKI
 string znajdzBajty(string log);
@@ -18,7 +19,7 @@ string znajdzPrzegladarke(string log);
 ///TWORZENIE IP
 vector<string> wytnijIP(string log);                ///wycina ip ze stringa
 vector<int> stworzInt(vector<string> stringip);      ///przeksztalca string ip na int
-vector<int> stworzIP(string log);
+uint32_t stworzIP(string log);                      ///sumuje inty w jedna cala liczbe
 
 ///TWORZENIE DATY
 int miesiacNaLiczbe(string s);          ///zmiana slowa miesiaca na liczbe

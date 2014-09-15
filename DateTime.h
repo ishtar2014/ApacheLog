@@ -10,8 +10,8 @@ protected:
     int dataiczas;
 public:
     DateTime();
-    DateTime(string dit);
-    virtual ~DateTime();
+    DateTime(string log);
+    ~DateTime();
 
     ///Metody:
     virtual void wyswietl();

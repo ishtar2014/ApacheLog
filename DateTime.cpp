@@ -6,12 +6,13 @@ using namespace std;
 DateTime::DateTime()
 {
     dataiczas = time_t(time(NULL));
+    cout << "konstruktor domyslny DT "<< endl;
 }
 
-DateTime::DateTime(string dit)
+DateTime::DateTime(string log)
 {
-    int c1 = epoch(dit);
-    dataiczas = c1;
+    dataiczas = epoch(log);
+    cout << "konstruktor DateTime z argumentem" << endl;
 }
 
 DateTime::~DateTime()
