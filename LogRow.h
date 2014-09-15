@@ -23,7 +23,7 @@ public:
     ///KONSTRUKCJA/DEKONSTRUKCJA
     LogRow();
     //LogRow(string log);
-    LogRow (string dit, vector <int> ip, string p, int32_t id);
+    LogRow(string log);
     ~LogRow();
 
     ///METODY

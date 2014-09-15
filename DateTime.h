@@ -8,6 +8,7 @@ class DateTime
 {
 protected:
     int dataiczas;
+    string humanDate;
 public:
     DateTime();
     DateTime(string log);

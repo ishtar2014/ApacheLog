@@ -17,9 +17,9 @@ string znajdzPrzegladarke(string log);
 
 
 ///TWORZENIE IP
-vector<string> wytnijIP(string log);                ///wycina ip ze stringa
-vector<int> stworzInt(vector<string> stringip);      ///przeksztalca string ip na int
-uint32_t stworzIP(string log);                      ///sumuje inty w jedna cala liczbe
+vector<string> wytnijIP(string log);                        ///wycina ip ze stringa
+vector<uint8_t> stworzInt(vector<string> stringip);      ///przeksztalca string ip na int
+vector<uint8_t> stworzIP(string log);                      ///robi wektor
 
 ///TWORZENIE DATY
 int miesiacNaLiczbe(string s);          ///zmiana slowa miesiaca na liczbe

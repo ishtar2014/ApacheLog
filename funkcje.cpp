@@ -97,9 +97,9 @@ vector<string> wytnijIP(string log)
     return ip;
 }
 
-vector<int> stworzInt(vector<string> stringip) //zmienia stringi ip na inty)
+vector<uint8_t> stworzInt(vector<string> stringip) //zmienia stringi ip na inty)
 {
-    vector<int> ip;
+    vector<uint8_t> ip;
     for(string::size_type i =0; i<stringip.size(); i++)
     {
         ip.push_back(atoi(stringip.at(i).c_str()));
@@ -107,12 +107,9 @@ vector<int> stworzInt(vector<string> stringip) //zmienia stringi ip na inty)
     return ip;
 }
 
-uint32_t stworzIP(string log)
+vector<uint8_t> stworzIP(string log)
 {
-    vector<int> tmp = stworzInt(wytnijIP(log));
-    uint32_t ip = 0;
-    for(int i =0; i<4; i++) ip += tmp.at(i);
-    return ip;
+    return stworzInt(wytnijIP(log));
 }
 
 
